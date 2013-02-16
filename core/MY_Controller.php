@@ -12,7 +12,7 @@ class MY_Controller extends CI_Controller
         $cfg = ActiveRecord\Config::instance();
         $cfg->set_model_directory(APPPATH . 'models/');
         $cfg->set_connections(array(
-            'development' =>'mysql://root:password@localhost/bashkim_com_au_development'
+            'development' =>'mysql://root:password@localhost/database_name'
         ));
         $cfg->set_default_connection('development');
 
