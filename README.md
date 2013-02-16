@@ -16,6 +16,17 @@ If you're developing a PHP application with the CodeIgniter framework as a base 
 * Open your application/config/autoload.php file and remove references to phpActiveRecord and the Session library
 * Copy the files in the repository to their respective directories in the application folder
 * Edit the file aplication/core/MY_Controller.php file and set your phpActiveRecord connection parameters
+* Run the following MySQL statement to create a table to store session information
+
+```sql
+CREATE TABLE `sessions` (
+    `session_id` varchar(255) DEFAULT NULL,
+    `ip_address` varchar(15) DEFAULT NULL,
+    `user_agent` varchar(255) DEFAULT NULL,
+    `last_activity` int(11) unsigned NOT NULL,
+    `user_data` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+```
 
 ## Licence
 
