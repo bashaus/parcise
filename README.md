@@ -20,12 +20,13 @@ If you're developing a PHP application with the CodeIgniter framework as a base 
 
 ```sql
 CREATE TABLE `sessions` (
-    `session_id` varchar(255) DEFAULT NULL,
-    `ip_address` varchar(15) DEFAULT NULL,
-    `user_agent` varchar(255) DEFAULT NULL,
-    `last_activity` int(11) unsigned NOT NULL,
-    `user_data` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `session_id` varchar(255) NOT NULL DEFAULT '',
+  `ip_address` varchar(15) DEFAULT NULL,
+  `user_agent` varchar(255) DEFAULT NULL,
+  `last_activity` int(11) unsigned NOT NULL,
+  `user_data` text,
+  PRIMARY KEY (`session_id`)
+) ENGINE=InnoDB;
 ```
 
 ## Licence
